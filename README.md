@@ -22,7 +22,7 @@ The following changes were made:
 For your convenience, the pre-compiled .hex-file is can be downloaded [here (right click "Save as...")](https://raw.githubusercontent.com/jgeisler0303/PIC16F1454_USB2Serial/master/PIC16F1454_USB2Serial.hex).
 
 ## Getting it to run
-If come from the Arduino/AVR world and don't have a programmer for PICs, you can try out my fork of [ardpicprog](https://github.com/jgeisler0303/ardpicprog) that enables you to program some PICs and especially the 16F1454 using a special sketch for your Arduino.
+If you come from the Arduino/AVR world and don't have a programmer for PICs, you can try out my fork of [ardpicprog](https://github.com/jgeisler0303/ardpicprog) that enables you to program some PICs and especially the 16F1454 using a special sketch for your Arduino.
 Read this [documentation](http://rweather.github.io/ardpicprog/) and further detail for the 16F1454 [here](https://github.com/jgeisler0303/ardpicprog#support-for-16f14545559-added-by-jgeisler0303) to learn how to use the programmer.
 
 For a basic wiring instructions, please refer to the schematic on the original project page.
