@@ -27,3 +27,11 @@
 *.i*86
 *.x86_64
 *.hex
+
+#Other
+.directory
+MPLAB.X/debug/**
+MPLAB.X/dist/**
+MPLAB.X/build/**
+
+!PIC16F1454_USB2Serial.hex
