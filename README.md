@@ -34,7 +34,7 @@ Generally, the following connections need to be made:
 * RC4 (Tx) to Rx of serial destination device (optionally via a 220 Ohm resistor)
 * A 0.1µF cap between Vdd (pin 1) and GND
 * A 0.1 to 0.47µF cap between Vusb (pin 11) and GND
-* 
+
 For a USB powered circuit (5V serial signals!)
 * USB Vdd (red wire) to Vdd (and possibly to serial destination device). Optionally via a PTC self resetting fuse).
 
