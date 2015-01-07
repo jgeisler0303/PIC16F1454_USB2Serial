@@ -4,7 +4,7 @@
 This firmware turns a PIC 16F1454 into a USB to Serial adapter like e.g. the famous FTDI FT232RL.
 
 ## Advantages
-* Except the PIC is less than half the price and available in a 14 pin DIL package.
+* The PIC is less than half the price and available in a 14 pin DIL package.
 * Like the FTDI it runs without an external oscillator.
 * Unlike the FTDI the source code is available and you can know exactly how everything is working, or even change things like e.g. the blinking pattern.
 * Unlike some [atmega8 solutions](http://www.recursion.jp/avrcdc/), it runs in full speed (USB 2.0) and is thus fully compliant with the USB standard.
