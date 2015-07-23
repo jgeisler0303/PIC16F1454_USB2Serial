@@ -58,6 +58,9 @@ unsigned char    RS232cp;       // current position within the buffer
 unsigned char RS232_Out_Data_Rdy = 0;
 USB_HANDLE  lastTransmission;
 
+unsigned char sending= 0;
+unsigned char receiving= 0;
+
 
 /** P R I V A T E  P R O T O T Y P E S ***************************************/
 static void InitializeSystem(void);
@@ -314,6 +317,7 @@ void InitializeUSART(void)
 void putcUSART(char c)  
 {
  	    TXREG = c;
+	    sending= 1;
 }
 
 
@@ -425,6 +429,7 @@ unsigned char getcUSART ()
     }
 // not necessary.  EUSART auto clears the flag when RCREG is cleared
 //	PIR1bits.RCIF = 0;    // clear Flag
+    receiving= 1;
     return c;
 }
 
@@ -596,15 +601,24 @@ void BlinkUSBStatus(void)
         {
             if(led_count==0)
             {
-                mLED_1_Toggle();
-                if(mGetLED_1())
-                {
-                    mLED_2_Off();
-                }
-                else
-                {
-                    mLED_2_On();
-                }
+	      if(UART_DTR) {	// no DTR
+		if(mGetLED_1()) {
+		  mLED_1_Off();
+		  receiving= 0;
+		} else if(receiving)
+		    mLED_1_On();
+	      } else {		// DTR
+		if(!mGetLED_1()) {
+		  mLED_1_On();
+		  receiving= 0;
+		} else if(receiving)
+		    mLED_1_Off();
+	      }		
+	      if(mGetLED_2()) {
+		mLED_2_Off();
+		sending= 0;
+	      } else if(sending)
+		  mLED_2_On();
             }//end if
         }//end if(...)
     }//end if(UCONbits.SUSPND...)
