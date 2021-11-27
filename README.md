@@ -10,7 +10,7 @@ This firmware turns a PIC 16F1454 into a USB to Serial adapter like e.g. the fam
 * Unlike some [atmega8 solutions](http://www.recursion.jp/avrcdc/), it runs in full speed (USB 2.0) and is thus fully compliant with the USB standard.
 
 ## Origin
-The code is mainly a copy of the [this](http://sky.geocities.jp/home_iwamoto/P16F145x/P16_L03.htm) project ([google english](http://translate.google.de/translate?hl=de&sl=ja&u=http://sky.geocities.jp/home_iwamoto/P16F145x/P16_L03.htm&prev=search)),
+The code is mainly a copy of the [this](https://web.archive.org/web/20170910150412/sky.geocities.jp/home_iwamoto/P16F145x/P16_L03.htm) project,
 which is basically a stand-alone copy of Microchip's  CDC - Serial Emulator Demo code.
 
 The following changes were made:
